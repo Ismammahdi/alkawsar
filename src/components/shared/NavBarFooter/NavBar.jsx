@@ -36,12 +36,12 @@ const NavBar = () => {
   ];
 
   const dropdownItems = [
-    { name: "রবিউল আউয়াল ১৪৪৬ / অক্টোবর ২০২৪" ,path:"/allIssues" },
-    { name: "রবিউল আউয়াল ১৪৪৬ / সেপ্টেম্বর ২০২৪" },
-    { name: "সফর ১৪৪৬ / আগস্ট ২০২৪" },
-    { name: "মুহাররম ১৪৪৬ / জুলাই ২০২৪" },
-    { name: "জিলহজ্ব ১৪৪৫ / জুন ২০২৪" },
-    { name: "আরও" },
+    { name: "রবিউল আউয়াল ১৪৪৬ / অক্টোবর ২০২৪", path: "/allIssues" },
+    { name: "রবিউল আউয়াল ১৪৪৬ / সেপ্টেম্বর ২০২৪", path: "/septembor" },
+    { name: "সফর ১৪৪৬ / আগস্ট ২০২৪", path: "/agost" },
+    { name: "মুহাররম ১৪৪৬ / জুলাই ২০২৪", path: "/julie" },
+    { name: "জিলহজ্ব ১৪৪৫ / জুন ২০২৪", path: "/june" },
+    { name: "আরও", path: "/more" },
   ];
 
   const dropdownItemsforlekhok = [
@@ -97,11 +97,11 @@ const NavBar = () => {
 
   return (
     <div
-      className={`fixed top-0 left-0 right-0 z-50 font-bengali transition-colors duration-300 ${
+      className={`fixed  top-0 left-0 right-0 z-50 font-bengali transition-colors duration-300 ${
         isScrolled ? "bg-black text-white" : "bg-white text-black"
       }`}
     >
-      <nav className="container relative mx-auto px-4 py-6 sm:py-6 md:py-6 md:px-6 lg:px-24">
+      <nav className=" relative mx-auto px-4 py-6 sm:py-6 md:py-6 md:px-6 lg:px-24">
         <div className="flex items-center justify-between">
           {!searchOpen && (
             <div className="flex items-center space-x-4">
@@ -112,7 +112,7 @@ const NavBar = () => {
                 <MdOutlineMenu />
               </div>
               <div className="flex items-center">
-                <img src={LogoImg} alt="Logo" className="w-[150px] h-auto" />
+                <img src={LogoImg} alt="Logo" className="w-[120px] h-auto" />
               </div>
             </div>
           )}
@@ -169,23 +169,23 @@ const NavBar = () => {
               <FaSearch onClick={() => setSearchOpen(true)} />
             ) : (
               <div
-                className={`absolute inset-0 flex items-center px-4 md:px-6 lg:px-24 ${
+                className={`absolute inset-0 flex items-center px-2 sm:px-4 md:px-6 lg:px-24 ${
                   isScrolled ? "bg-black text-white" : "bg-white text-black"
                 }`}
               >
                 <input
                   type="text"
                   placeholder="বাংলায় খুঁজুন"
-                  className={`border ${
+                  className={`border w-full ${
                     isScrolled
                       ? "border-gray-700 bg-gray-800 text-white"
                       : "border-gray-300 bg-white text-black"
-                  } rounded-l px-4 py-2 flex-grow`}
+                  } rounded-l px-2 sm:px-4 py-2 text-sm sm:text-base flex-grow`}
                 />
                 <button
                   className={`${
                     isScrolled ? "bg-gray-800" : "bg-gray-100"
-                  } px-3 py-3 border ${
+                  } px-2 sm:px-3 py-2 sm:py-3 border ${
                     isScrolled ? "border-gray-700" : "border-gray-300"
                   }`}
                 >
@@ -200,7 +200,7 @@ const NavBar = () => {
                     isScrolled
                       ? "bg-gray-800 text-white"
                       : "bg-gray-100 text-gray-600"
-                  } px-3 py-3 border ${
+                  } px-2 sm:px-3 py-2 sm:py-3 border ${
                     isScrolled ? "border-gray-700" : "border-gray-300"
                   }`}
                   onClick={() => setSearchOpen(false)}
@@ -214,7 +214,7 @@ const NavBar = () => {
       </nav>
 
       <div
-        className={`absolute top-20 left-0 w-64 bg-black text-white shadow-lg p-4 z-50 transform transition-transform duration-300 ease-in-out ${
+        className={`absolute top-20 left-0  sm:w-64 bg-black text-white shadow-lg p-4 z-50 transform transition-transform duration-300 ease-in-out ${
           sidebarOpen ? "translate-x-0" : "-translate-x-full"
         } lg:hidden`}
       >

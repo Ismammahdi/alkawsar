@@ -40,10 +40,10 @@ const Banner = () => {
   ];
 
   return (
-    <div className="">
+    <div className=" ">
       {/* Banner Section */}
       <div
-        className="relative min-w-full bg-cover bg-top w-full h-60 flex items-center font-bengali "
+        className="relative w-screen bg-cover bg-top h-60 flex items-center font-bengali "
         style={{
           backgroundImage: `url(${bannerImage})`,
         }}
